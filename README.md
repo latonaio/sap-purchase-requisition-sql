@@ -12,6 +12,7 @@ https://api.sap.com/api/OP_API_PURCHASEREQ_PROCESS_SRV_0001/overview
 sap-business-partner-sql には、sqlの設定ファイルとして、以下のファイルが含まれます。 
 
 * sap-purchase-requisition-sql.sql （SAP 購買依頼）
+* sap-purchase-requisition-sql-delivery-address-data.sql (SAP 購買依頼 - 納入先住所データ)  
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法  
 MySQLのセットアップ / Kubernetesの設定 / 具体的なSQLテーブルの作成方法、については、[mysql-kube](https://github.com/latonaio/mysql-kube)を参照ください。  
