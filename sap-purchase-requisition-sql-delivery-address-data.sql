@@ -1,7 +1,7 @@
 CREATE TABLE `sap-purchase-requisition-delivery-address-data`
 (
     `PurchaseRequisition`     varchar(10) DEFAULT NULL,
-    `PurchaseRequisitionItem` int(5) DEFAULT NULL,
+    `PurchaseRequisitionItem` varchar(5) DEFAULT NULL,
     `AddressID`               varchar(10) DEFAULT NULL,
     `Country`                 varchar(3) DEFAULT NULL,
     `Region`                  varchar(3) DEFAULT NULL,
