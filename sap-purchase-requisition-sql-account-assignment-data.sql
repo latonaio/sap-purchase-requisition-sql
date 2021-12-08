@@ -23,7 +23,7 @@ CREATE TABLE `sap-purchase-requisition-account-assignment-data`
     `GoodsRecipientName`      varchar(12) DEFAULT NULL,
     `CostCtrActivityType`     varchar(6) DEFAULT NULL,
     `WBSElement`              varchar(8) DEFAULT NULL,
-    `IsDeleted`               tinyint(1) DEFAULT NULL,
+    `IsDeleted`               varchar(1) DEFAULT NULL,
     PRIMARY KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`, `PurchaseReqnAcctAssgmtNumber`)
     CONSTRAINT `PurchaseRequisition_fk` FOREIGN KEY (`PurchaseRequisition`) REFERENCES `sap-purchase-requisition` (`PurchaseRequisition`)
 ) ENGINE = InnoDB
