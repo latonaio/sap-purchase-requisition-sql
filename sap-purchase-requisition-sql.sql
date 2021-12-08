@@ -2,7 +2,7 @@ CREATE TABLE `sap-purchase-requisition`
 (
     `PurchaseRequisition`     varchar(10) DEFAULT NULL,
     `PurchaseRequisitionType` varchar(4) DEFAULT NULL,
-    `SourceDetermination`     varchar(1) DEFAULT NULL,
+    `SourceDetermination`     tinyint(1) DEFAULT NULL,
     `PurchaseRequisitionItem` varchar(5) DEFAULT NULL,
     `PurchasingDocument`      varchar(10) DEFAULT NULL,
     `PurchasingDocumentItem`  varchar(5) DEFAULT NULL,
