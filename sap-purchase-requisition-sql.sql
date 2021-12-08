@@ -41,7 +41,7 @@ CREATE TABLE `sap-purchase-requisition`
     `PurReqnSourceOfSupplyType` varchar(1) DEFAULT NULL,
     `ConsumptionPosting`      varchar(1) DEFAULT NULL,
     `PurReqnOrigin`           varchar(1) DEFAULT NULL,
-    `IsPurReqnBlocked`        tinyint(1) DEFAULT NULL,
+    `IsPurReqnBlocked`        varchar(1) DEFAULT NULL,
     `PurchaseRequisitionStatus` varchar(2) DEFAULT NULL,
     `Batch`                   varchar(10) DEFAULT NULL,
     `GoodsReceiptIsExpected`  tinyint(1) DEFAULT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE `sap-purchase-requisition`
     `MRPController`           varchar(3) DEFAULT NULL,
     `Reservation`             varchar(10) DEFAULT NULL,
     `LastChangeDateTime`      datetime DEFAULT NULL,
-    `IsDeleted`               tinyint(1) DEFAULT NULL,
+    `IsDeleted`               varchar(1) DEFAULT NULL,
     PRIMARY KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
