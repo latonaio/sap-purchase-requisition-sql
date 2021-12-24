@@ -1,8 +1,8 @@
 CREATE TABLE `sap-purchase-requisition-account-assignment-data`
 (
-    `PurchaseRequisition`     varchar(10) DEFAULT NULL,
-    `PurchaseRequisitionItem` varchar(5) DEFAULT NULL,
-    `PurchaseReqnAcctAssgmtNumber` varchar(2) DEFAULT NULL,
+    `PurchaseRequisition`     varchar(10) NOT NULL,
+    `PurchaseRequisitionItem` varchar(5) NOT NULL,
+    `PurchaseReqnAcctAssgmtNumber` varchar(2) NOT NULL,
     `CostCenter`              varchar(10) DEFAULT NULL,
     `MasterFixedAsset`        varchar(12) DEFAULT NULL,
     `FixedAsset`              varchar(4) DEFAULT NULL,
@@ -23,8 +23,8 @@ CREATE TABLE `sap-purchase-requisition-account-assignment-data`
     `GoodsRecipientName`      varchar(12) DEFAULT NULL,
     `CostCtrActivityType`     varchar(6) DEFAULT NULL,
     `WBSElement`              varchar(8) DEFAULT NULL,
-    `IsDeleted`               tinyint(1) DEFAULT NULL,
+    `IsDeleted`               varchar(1) DEFAULT NULL,
     PRIMARY KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`, `PurchaseReqnAcctAssgmtNumber`)
-    CONSTRAINT `PurchaseRequisition_fk` FOREIGN KEY (`PurchaseRequisition`) REFERENCES `sap-purchase-requisition` (`PurchaseRequisition`)
+    CONSTRAINT (`PurchaseRequisition_fk`, `PurchaseRequisitionItem_fk` FOREIGN KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`) REFERENCES `sap-purchase-requisition` (`PurchaseRequisition`, `PurchaseRequisitionItem`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
