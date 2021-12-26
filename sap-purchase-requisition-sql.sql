@@ -1,4 +1,4 @@
-CREATE TABLE `sap-purchase-requisition`
+CREATE TABLE `sap_purchase_requisition`
 (
     `PurchaseRequisition`     varchar(10) NOT NULL,
     `PurchaseRequisitionItem` varchar(5) NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE `sap-purchase-requisition`
     `PurReqnPriceQuantity`    varchar(13) DEFAULT NULL,
     `MaterialGoodsReceiptDuration` varchar(3) DEFAULT NULL,
     `ReleaseCode`             varchar(1) DEFAULT NULL,
-    `PurchaseRequisitionReleaseDate` date DEFAULT NULL,
+    `PurchaseRequisitionReleaseDate` varchar(80) DEFAULT NULL,
     `PurchasingOrganization`  varchar(4) DEFAULT NULL,
     `PurchasingGroup`         varchar(3) DEFAULT NULL,
     `Plant`                   varchar(4) DEFAULT NULL,
@@ -27,8 +27,8 @@ CREATE TABLE `sap-purchase-requisition`
     `SourceOfSupplyIsAssigned` tinyint(1) DEFAULT NULL,
     `SupplyingPlant`          varchar(4) DEFAULT NULL,
     `OrderedQuantity`         varchar(13) DEFAULT NULL,
-    `DeliveryDate`            date DEFAULT NULL,
-    `CreationDate`            date DEFAULT NULL,
+    `DeliveryDate`            varchar(80) DEFAULT NULL,
+    `CreationDate`            varchar(80) DEFAULT NULL,
     `ProcessingStatus`        varchar(2) DEFAULT NULL,
     `ExternalApprovalStatus`  varchar(1) DEFAULT NULL,
     `PurchasingInfoRecord`    varchar(10) DEFAULT NULL,
@@ -49,7 +49,7 @@ CREATE TABLE `sap-purchase-requisition`
     `RequirementTracking`     varchar(10) DEFAULT NULL,
     `MRPController`           varchar(3) DEFAULT NULL,
     `Reservation`             varchar(10) DEFAULT NULL,
-    `LastChangeDateTime`      datetime DEFAULT NULL,
+    `LastChangeDateTime`      varchar(80) DEFAULT NULL,
     `IsDeleted`               varchar(1) DEFAULT NULL,
     PRIMARY KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`)
 ) ENGINE = InnoDB

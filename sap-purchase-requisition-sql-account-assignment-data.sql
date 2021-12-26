@@ -1,4 +1,4 @@
-CREATE TABLE `sap-purchase-requisition-account-assignment-data`
+CREATE TABLE `sap_purchase_requisition_account_assignment_data`
 (
     `PurchaseRequisition`     varchar(10) NOT NULL,
     `PurchaseRequisitionItem` varchar(5) NOT NULL,
@@ -25,6 +25,6 @@ CREATE TABLE `sap-purchase-requisition-account-assignment-data`
     `WBSElement`              varchar(8) DEFAULT NULL,
     `IsDeleted`               varchar(1) DEFAULT NULL,
     PRIMARY KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`, `PurchaseReqnAcctAssgmtNumber`)
-    CONSTRAINT (`PurchaseRequisition_fk`, `PurchaseRequisitionItem_fk` FOREIGN KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`) REFERENCES `sap-purchase-requisition` (`PurchaseRequisition`, `PurchaseRequisitionItem`)
+    CONSTRAINT (`SAPPurchaseRequisitionAccountAssignmentData_fk`, `PurchaseRequisitionItem_fk` FOREIGN KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`) REFERENCES `sap_purchase_requisition` (`PurchaseRequisition`, `PurchaseRequisitionItem`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
