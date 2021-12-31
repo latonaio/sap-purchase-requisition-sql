@@ -1,4 +1,4 @@
-CREATE TABLE `sap_purchase_requisition_delivery_address_data`
+CREATE TABLE `sap_purchase_requisition_item_delivery_address_data`
 (
     `PurchaseRequisition`     varchar(10) NOT NULL,
     `PurchaseRequisitionItem` varchar(5) NOT NULL,
@@ -11,6 +11,6 @@ CREATE TABLE `sap_purchase_requisition_delivery_address_data`
     `FaxNumber`               varchar(30) DEFAULT NULL,
     `PhoneNumber`             varchar(30) DEFAULT NULL,
     PRIMARY KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`),
-    CONSTRAINT (`SAPPurchaseRequisitionDeliveryAddressData_fk`, `PurchaseRequisitionItem_fk` FOREIGN KEY (`PurchaseRequisition`, `PurchaseRequisitionItem`) REFERENCES `sap_purchase_requisition` (`PurchaseRequisition`, `PurchaseRequisitionItem`)
+    CONSTRAINT `SAPPurchaseRequisitionItemDeliveryAddressData_fk` FOREIGN KEY (`PurchaseRequisition`) REFERENCES `sap_purchase_requisition_header_data` (`PurchaseRequisition`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
